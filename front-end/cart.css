@@ -1,0 +1,19 @@
+/* Adicione essas regras ao seu arquivo cart.css */
+section#cart {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  ul#cart-items {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul#cart-items li {
+    margin-bottom: 10px;
+  }
+  

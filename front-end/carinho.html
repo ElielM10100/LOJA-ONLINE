@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="cart.css">
+  <title>Carrinho</title>
+</head>
+<body>
+  <header>
+    <h1>Carrinho</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showHome()">Home</a></li>
+        <li><a href="#" onclick="showProducts()">Produtos</a></li>
+        <li><a href="#" onclick="showCart()">Carrinho</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="cart" class="content">
+    <h2>Seu Carrinho</h2>
+    
+    <div id="cart-items">
+      <!-- Itens do carrinho serão exibidos aqui -->
+    </div>
+    
+    <div id="payment-options">
+      <h3>Formas de Pagamento:</h3>
+      <div>
+        <label for="pix"><input type="radio" id="pix" name="payment" value="pix"> PIX</label>
+      </div>
+      <div>
+        <label for="boleto"><input type="radio" id="boleto" name="payment" value="boleto"> Boleto Bancário</label>
+      </div>
+      <div>
+        <label for="cartao"><input type="radio" id="cartao" name="payment" value="cartao" onclick="showCardDetails()"> Cartão de Crédito</label>
+      </div>
+    </div>
+
+    <div id="card-details">
+      <h3>Dados do Cartão:</h3>
+      <label for="card-number">Número do Cartão:</label>
+      <input type="text" id="card-number" name="card-number" placeholder="**** **** **** ****">
+
+      <label for="card-name">Nome no Cartão:</label>
+      <input type="text" id="card-name" name="card-name" placeholder="Nome Completo">
+
+      <div class="card-expiry-cvv">
+        <div>
+          <label for="card-expiry">Validade:</label>
+          <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA">
+        </div>
+        <div>
+          <label for="card-cvv">CVV:</label>
+          <input type="text" id="card-cvv" name="card-cvv" placeholder="CVV">
+        </div>
+      </div>
+
+      <button onclick="checkout()">Finalizar Compra</button>
+    </div>
+
+    <p id="cart-total">Total: R$ <span>0.00</span></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
